@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.chenshun00.fix.dao.mapper.EntrustMapper">
+
+    <insert id="save" keyProperty="id" useGeneratedKeys="true" keyColumn="id">
+        insert into entrust(sender_comp_id, target_comp_id, msg_type, symbol, text, create_time, update_time)
+            value (#{q.senderCompId},#{q.targetCompId},#{q.msgType},#{q.symbol},#{q.text},#{q.createTime},#{q.updateTime})
+    </insert>
+
+    <select id="query" resultType="io.github.chenshun00.fix.dao.domain.Entrust">
+
+    </select>
+</mapper>
+
